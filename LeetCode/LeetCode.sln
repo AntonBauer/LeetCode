@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitArrayIntoConsecutiveSu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSubarray.Cli", "MaxSubarray.Cli\MaxSubarray.Cli.csproj", "{DBB9B2CF-8E4D-4365-9817-8B8360BF8AE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinNumberRefuelingStops", "MinNumberRefuelingStops\MinNumberRefuelingStops.csproj", "{9E7681FD-BA2C-454B-9088-03286ED79BEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{DBB9B2CF-8E4D-4365-9817-8B8360BF8AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBB9B2CF-8E4D-4365-9817-8B8360BF8AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBB9B2CF-8E4D-4365-9817-8B8360BF8AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E7681FD-BA2C-454B-9088-03286ED79BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E7681FD-BA2C-454B-9088-03286ED79BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E7681FD-BA2C-454B-9088-03286ED79BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E7681FD-BA2C-454B-9088-03286ED79BEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
