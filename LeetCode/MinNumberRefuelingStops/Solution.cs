@@ -1,6 +1,6 @@
 ﻿namespace MinNumberRefuelingStops;
 
-// 8718
+// 871
 internal static class Solution
 {
     public static int MinRefuelStops(int target, int startFuel, int[][] stations) =>
@@ -22,7 +22,7 @@ internal static class Solution
             var currentStation = reachableStations[i];
             var newPosition = currentStation[0];
             var newFuel = currentFuel - (currentStation[0] - currentPosition) + currentStation[1];
-            var newStations = stations[(furthestReachableIndex + 1)..];
+            var newStations = stations[(i + 1)..];
 
             var stops = CalculateMinRefuelStops(newPosition, newFuel, newStations, currentStops + 1);
             if (stops >= 0)
