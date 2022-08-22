@@ -7,7 +7,7 @@ internal static class Solution
         var first = 0;
         var second = 0;
 
-        while ( /*first < m &&*/ second < n)
+        while (second < n)
         {
             if (nums2[second] < nums1[first] || nums1[first] == 0)
             {
@@ -22,7 +22,7 @@ internal static class Solution
 
     private static void ShiftRight(int[] array, int index)
     {
-        for (var i = array.Length - 2; i > index; i--)
+        for (var i = array.Length - 1; i > index; i--)
         {
             array[i] = array[i - 1];
             array[i - 1] = 0;
