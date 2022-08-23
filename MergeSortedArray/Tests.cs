@@ -13,11 +13,7 @@ public class Tests
         Solution.Merge(nums1, m, nums2, n);
 
         // Assert
-        Assert.Multiple(() =>
-        {
-            for (var i = 0; i < nums1.Length; i++)
-                Assert.That(nums1[i], Is.EqualTo(expected[i]));
-        });
+        CollectionAssert.AreEqual(nums1, expected);
     }
 
     public static IEnumerable<TestCaseData> TestCases()
