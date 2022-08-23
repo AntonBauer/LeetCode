@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSortedArray", "MergeSo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeLinkedList", "PalindromeLinkedList\PalindromeLinkedList.csproj", "{16296039-0071-46A0-8B67-F4A79730474D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntersectionOfTwoArraysII", "IntersectionOfTwoArraysII\IntersectionOfTwoArraysII.csproj", "{5B4ADD31-EA76-4635-9B7D-E3031A6BE7AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidParentheses", "ValidParentheses\ValidParentheses.csproj", "{D511AB09-F9F1-4DE0-AAD1-CA407E4D9726}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +52,13 @@ Global
 		{16296039-0071-46A0-8B67-F4A79730474D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16296039-0071-46A0-8B67-F4A79730474D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16296039-0071-46A0-8B67-F4A79730474D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B4ADD31-EA76-4635-9B7D-E3031A6BE7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B4ADD31-EA76-4635-9B7D-E3031A6BE7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B4ADD31-EA76-4635-9B7D-E3031A6BE7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B4ADD31-EA76-4635-9B7D-E3031A6BE7AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D511AB09-F9F1-4DE0-AAD1-CA407E4D9726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D511AB09-F9F1-4DE0-AAD1-CA407E4D9726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D511AB09-F9F1-4DE0-AAD1-CA407E4D9726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D511AB09-F9F1-4DE0-AAD1-CA407E4D9726}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
