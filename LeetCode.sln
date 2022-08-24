@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidParentheses", "ValidPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerOfThree", "PowerOfThree\PowerOfThree.csproj", "{3686FF00-D188-4E2F-A43F-BB45CDDD3082}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RansomNote", "RansomNote\RansomNote.csproj", "{0F9C8C2E-4FA9-4FC4-B28A-55D5FA28AE16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +68,9 @@ Global
 		{3686FF00-D188-4E2F-A43F-BB45CDDD3082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3686FF00-D188-4E2F-A43F-BB45CDDD3082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3686FF00-D188-4E2F-A43F-BB45CDDD3082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F9C8C2E-4FA9-4FC4-B28A-55D5FA28AE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F9C8C2E-4FA9-4FC4-B28A-55D5FA28AE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F9C8C2E-4FA9-4FC4-B28A-55D5FA28AE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F9C8C2E-4FA9-4FC4-B28A-55D5FA28AE16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
