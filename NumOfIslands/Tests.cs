@@ -25,5 +25,20 @@ public class Tests
             new[] { '0', '0', '1', '0', '0' },
             new[] { '0', '0', '0', '1', '1' }
         }.ToList()).Returns(3).SetName("02");
+
+        yield return new TestCaseData(new[]
+        {
+            new[] { '1', '1', '1' },
+            new[] { '0', '1', '0' },
+            new[] { '1', '1', '1' }
+        }.ToList()).Returns(1).SetName("03");
+        
+        yield return new TestCaseData(new[]
+        {
+            new[] { '1', '0', '1', '1', '1' },
+            new[] { '1', '0', '1', '0', '1' },
+            new[] { '1', '1', '1', '0', '1' },
+        }.ToList()).Returns(1).SetName("04");
+
     }
 }
