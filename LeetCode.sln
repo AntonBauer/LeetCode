@@ -26,7 +26,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedianTwoSortedArrays", "Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PascalsTriangle", "PascalsTriangle\PascalsTriangle.csproj", "{B2968E59-6073-4881-B49A-9597DDBAF4D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReshapeTheMatrix", "ReshapeTheMatrix\ReshapeTheMatrix.csproj", "{30BA00AF-6F40-40EF-96E9-5C0EC10541BF}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumOfIslands", "NumOfIslands\NumOfIslands.csproj", "{F6BEC21D-4ACC-414F-8716-6CA0301D9358}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RotateImage", "RotateImage\RotateImage.csproj", "{A4B12B0A-DC40-4263-99EC-D32EF3BE3163}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,9 +90,17 @@ Global
 		{B2968E59-6073-4881-B49A-9597DDBAF4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2968E59-6073-4881-B49A-9597DDBAF4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2968E59-6073-4881-B49A-9597DDBAF4D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BA00AF-6F40-40EF-96E9-5C0EC10541BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BA00AF-6F40-40EF-96E9-5C0EC10541BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BA00AF-6F40-40EF-96E9-5C0EC10541BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BA00AF-6F40-40EF-96E9-5C0EC10541BF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6BEC21D-4ACC-414F-8716-6CA0301D9358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6BEC21D-4ACC-414F-8716-6CA0301D9358}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6BEC21D-4ACC-414F-8716-6CA0301D9358}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6BEC21D-4ACC-414F-8716-6CA0301D9358}.Release|Any CPU.Build.0 = Release|Any CPU
+								{F6BEC21D-4ACC-414F-8716-6CA0301D9358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+								{F6BEC21D-4ACC-414F-8716-6CA0301D9358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+								{F6BEC21D-4ACC-414F-8716-6CA0301D9358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4B12B0A-DC40-4263-99EC-D32EF3BE3163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4B12B0A-DC40-4263-99EC-D32EF3BE3163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4B12B0A-DC40-4263-99EC-D32EF3BE3163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4B12B0A-DC40-4263-99EC-D32EF3BE3163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
