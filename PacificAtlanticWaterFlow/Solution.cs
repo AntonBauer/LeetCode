@@ -14,35 +14,32 @@ internal static class Solution
     public static int[][] PacificAtlantic(int[][] heights)
     {
         var exits = new Dictionary<Position, HashSet<ExitTo>>();
+        var rows = heights.Length;
+        var cols = heights[0].Length;
 
         for (var i = 0; i < heights.Length; i++)
         for (var j = 0; j < heights[0].Length; j++)
-            FindExits(new Position(i, j), heights, exits);
+            FindExits(new Position(i, j), heights, exits, rows, cols);
 
         return exits.Where(e => e.Value.Count == 2).Select(e => new[] { e.Key.Row, e.Key.Col }).ToArray(); 
     }
 
-    private static void FindExits(Position position, int[][] island, Dictionary<Position, HashSet<ExitTo>> exits)
+    private static void FindExits(Position position, int[][] island, Dictionary<Position, HashSet<ExitTo>> exits, int rows, int cols)
     {
         if (exits.ContainsKey(position)) return;
 
         exits.Add(position, new HashSet<ExitTo>());
-
-        var rows = island.Length;
-        var cols = island[0].Length;
-
-
+        
         if (position.IsDirectPacific())
             exits[position].Add(ExitTo.Pacific);
 
         if (position.IsDirectAtlantic(rows, cols))
             exits[position].Add(ExitTo.Atlantic);
 
-        var currentHeight = island[position.Row][position.Col];
-        foreach (var neighbour in position.Neighbours(rows, cols).Where(n => n.IsLowerThan(currentHeight, island)))
+        foreach (var neighbour in position.Neighbours(rows, cols).Where(n => island.HeightIn(n) <= island.HeightIn(position)))
         {
             if (!exits.ContainsKey(neighbour))
-                FindExits(neighbour, island, exits);
+                FindExits(neighbour, island, exits, rows, cols);
 
             exits[position].UnionWith(exits[neighbour]);
         }
@@ -75,6 +72,5 @@ internal static class Extensions
             yield return currentPosition with { Col = currentPosition.Col - 1 };
     }
 
-    public static bool IsLowerThan(this Position pos, int currentHeight, int[][] island) =>
-        island[pos.Row][pos.Col] <= currentHeight;
+    public static int HeightIn(this int[][] map, Position pos) => map[pos.Row][pos.Col];
 }
