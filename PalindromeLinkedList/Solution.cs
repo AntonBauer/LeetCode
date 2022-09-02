@@ -1,7 +1,6 @@
 ﻿namespace PalindromeLinkedList;
 
 // 234. Palindrome Linked List
-
 internal static class Solution
 {
     public static bool IsPalindrome(ListNode head)
