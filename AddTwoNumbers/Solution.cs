@@ -25,36 +25,49 @@ internal static class Solution
 
         do
         {
-            var s1 = first?.val ?? 0;
-            var s2 = second?.val ?? 0;
-
-            var sum = hasOverflow
-                ? s1 + s2 + 1
-                : s1 + s2;
-            var corrected = sum > 9
-                ? sum - 10
-                : sum;
-
-            hasOverflow = sum > 9;
-
-            if (sumHead == default)
-            {
-                sumHead = new ListNode(corrected);
-                sumTail = sumHead;
-            }
-            else
-            {
-                sumTail.next = new ListNode(corrected);
-                sumTail = sumTail.next;
-            }
+            (var sum, hasOverflow) = Sum(first?.val ?? 0, second?.val ?? 0, hasOverflow);
+            (sumHead, sumTail) = AddToList(sumHead, sumTail, sum);
 
             first = first?.next;
             second = second?.next;
-        } while (first != null && second != null);
+        } while (!IsAtEnd(first, second));
 
         if (hasOverflow)
             sumTail.next = new ListNode(1);
         
         return sumHead;
     }
+
+    private static (int sum, bool hasOverflow) Sum(int s1, int s2, bool withOverflow)
+    {
+        var sum = withOverflow
+            ? s1 + s2 + 1
+            : s1 + s2;
+        
+        var hasOverflow = sum > 9;
+        
+        var corrected = hasOverflow
+            ? sum - 10
+            : sum;
+
+        return (corrected, hasOverflow);
+    }
+
+    private static (ListNode head, ListNode tail) AddToList(ListNode head, ListNode tail, int sum)
+    {
+        if (head == default)
+        {
+            head = new ListNode(sum);
+            tail = head;
+        }
+        else
+        {
+            tail.next = new ListNode(sum);
+            tail = tail.next;
+        }
+
+        return (head, tail);
+    }
+
+    private static bool IsAtEnd(ListNode first, ListNode second) => first == null && second == null;
 }
