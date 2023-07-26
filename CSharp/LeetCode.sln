@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 
+#
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReduceArraySize.Cli", "ReduceArraySize.Cli\ReduceArraySize.Cli.csproj", "{04AA54CB-81B6-42D3-B8E7-CE480BA3E1B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitArrayIntoConsecutiveSubsequences.Cli", "SplitArrayIntoConsecutiveSubsequences.Cli\SplitArrayIntoConsecutiveSubsequences.Cli.csproj", "{F7EAC443-DFEC-4D18-A5B4-4662CB2CAB8C}"
@@ -47,7 +47,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hard", "Hard", "{E7366967-F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSubstringWithoutRepeatingCharacters", "LongestSubstringWithoutRepeatingCharacters\LongestSubstringWithoutRepeatingCharacters.csproj", "{53AFAC95-4B07-4947-BD6F-D8FA8DAF3A1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeTwoSortedArrays", "MergeTwoSortedArrays\MergeTwoSortedArrays.csproj", "{016925AC-121C-4AE7-AF58-91BC769FE332}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeTwoSortedLists", "MergeTwoSortedLists\MergeTwoSortedLists.csproj", "{016925AC-121C-4AE7-AF58-91BC769FE332}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
