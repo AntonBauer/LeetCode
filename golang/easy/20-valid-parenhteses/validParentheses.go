@@ -32,16 +32,25 @@ func isValid(s string) bool {
 			stack.Push(char)
 
 		case char == '}':
+			if stack.IsEmpty() {
+				return false
+			}
 			last := stack.Pop()
 			if last != '{' {
 				return false
 			}
 		case char == ')':
+			if stack.IsEmpty() {
+				return false
+			}
 			last := stack.Pop()
 			if last != '(' {
 				return false
 			}
 		case char == ']':
+			if stack.IsEmpty() {
+				return false
+			}
 			last := stack.Pop()
 			if last != '[' {
 				return false
