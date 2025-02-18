@@ -31,7 +31,7 @@ func mergeTwoLists(list1 *shared.ListNode, list2 *shared.ListNode) *shared.ListN
 
 	var current = head
 
-	for current1 != nil && current2 != nil {
+	for current1 != nil || current2 != nil {
 		switch {
 		case current2 == nil || current1.Val < current2.Val:
 			current.Next = &shared.ListNode{
