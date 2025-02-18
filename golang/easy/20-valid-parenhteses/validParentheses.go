@@ -1,52 +1,53 @@
 package validParentheses
 
+type Stack struct {
+	items []rune
+}
+
+func (s *Stack) Push(char rune) {
+	s.items = append(s.items, char)
+}
+
+func (s *Stack) Peek() rune {
+	return s.items[len(s.items)-1]
+}
+
+func (s *Stack) Pop() rune {
+	var item = s.items[len(s.items)-1]
+	s.items = s.items[:len(s.items)-1]
+
+	return item
+}
+
+func (s *Stack) IsEmpty() bool {
+	return len(s.items) == 0
+}
+
 func isValid(s string) bool {
-	var counter = make(map[byte]int)
+	stack := Stack{}
 
-	for _, character := range s {
-		var encoded = encode(character)
+	for _, char := range s {
+		switch {
+		case char == '{' || char == '(' || char == '[':
+			stack.Push(char)
 
-		count, contains := counter[encoded]
-
-		if contains {
-			if shouldAdd(character) {
-				count = count + 1
-			} else {
-				count = count - 1
+		case char == '}':
+			last := stack.Pop()
+			if last != '{' {
+				return false
 			}
-		} else {
-			count = 1
-		}
-
-		counter[encoded] = count
-	}
-
-	return areAllValuesZero(counter)
-}
-
-func encode(parenthesis rune) byte {
-	switch {
-	case parenthesis == '{' || parenthesis == '}':
-		return 0
-	case parenthesis == '(' || parenthesis == ')':
-		return 1
-	case parenthesis == '[' || parenthesis == ']':
-		return 2
-	}
-
-	return 255
-}
-
-func shouldAdd(parenthesis rune) bool {
-	return parenthesis == '{' || parenthesis == '(' || parenthesis == '['
-}
-
-func areAllValuesZero(counter map[byte]int) bool {
-	for _, value := range counter {
-		if value != 0 {
-			return false
+		case char == ')':
+			last := stack.Pop()
+			if last != '(' {
+				return false
+			}
+		case char == ']':
+			last := stack.Pop()
+			if last != '[' {
+				return false
+			}
 		}
 	}
 
-	return true
+	return stack.IsEmpty()
 }

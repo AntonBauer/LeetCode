@@ -14,6 +14,7 @@ var testCases = []validParenthesesTestData{
 	{"(]", "(]", false},
 	{"([])", "([])", true},
 	{"([)]", "([)]", false},
+	{"]", "]", false},
 }
 
 func TestIsValid(t *testing.T) {
