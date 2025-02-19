@@ -19,12 +19,12 @@ func mergeTwoLists(list1 *shared.ListNode, list2 *shared.ListNode) *shared.ListN
 
 	if current1.Val > current2.Val {
 		head = &shared.ListNode{
-			Val:  current2.Val,
+			Val: current2.Val,
 		}
 		current2 = current2.Next
 	} else {
 		head = &shared.ListNode{
-			Val:  current1.Val,
+			Val: current1.Val,
 		}
 		current1 = current1.Next
 	}
@@ -33,19 +33,31 @@ func mergeTwoLists(list1 *shared.ListNode, list2 *shared.ListNode) *shared.ListN
 
 	for current1 != nil || current2 != nil {
 		switch {
-		case current2 == nil || current1.Val < current2.Val:
+		case current2 == nil:
 			current.Next = &shared.ListNode{
-				Val:  current1.Val,
+				Val: current1.Val,
 			}
 			current1 = current1.Next
 
-		case current1 == nil || current1.Val >= current2.Val:
+		case current1 == nil:
 			current.Next = &shared.ListNode{
-				Val:  current2.Val,
+				Val: current2.Val,
 			}
 			current2 = current2.Next
+
+		case current1.Val > current2.Val:
+			current.Next = &shared.ListNode{
+				Val: current2.Val,
+			}
+			current2 = current2.Next
+
+		case current1.Val <= current2.Val:
+			current.Next = &shared.ListNode{
+				Val: current1.Val,
+			}
+			current1 = current1.Next
 		}
-			current = current.Next
+		current = current.Next
 	}
 
 	return head
