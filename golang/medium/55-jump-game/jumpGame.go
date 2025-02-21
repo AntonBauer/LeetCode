@@ -1,6 +1,10 @@
 package jumpGame
 
+var isVisited map[int]bool
+
 func canJump(nums []int) bool {
+	isVisited = make(map[int]bool)
+
 	if len(nums) == 1 {
 		return true
 	}
@@ -9,16 +13,22 @@ func canJump(nums []int) bool {
 }
 
 func canJumpFrom(currentPosition int, nums []int) bool {
+	var _, contains = isVisited[currentPosition]
+	if contains {
+		return false
+	}
+
 	if currentPosition == len(nums)-1 {
 		return true
 	}
 
-	if nums[currentPosition] == 0 {
-		return false
-	}
-
 	if currentPosition+nums[currentPosition] >= len(nums)-1 {
 		return true
+	}
+
+	if nums[currentPosition] == 0 {
+		isVisited[currentPosition] = true
+		return false
 	}
 
 	for i := currentPosition + nums[currentPosition]; i > 0; i -= 1 {
@@ -27,5 +37,6 @@ func canJumpFrom(currentPosition int, nums []int) bool {
 		}
 	}
 
+	isVisited[currentPosition] = true
 	return false
 }
