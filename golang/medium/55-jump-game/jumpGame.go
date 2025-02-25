@@ -1,26 +1,25 @@
 package jumpGame
 
 func canJump(nums []int) bool {
-	canReachEnd := make(map[int]bool)
-	canReachEnd[len(nums)-1] = true // last item in array can reach itself
+	longestJump := 0
 
-	for i := len(nums) - 2; i >= 0; i -= 1 {
-		for destination := min(len(nums)-1, i+nums[i]); destination > 0; destination -= 1 {
-			if canReachEnd[destination] {
-				canReachEnd[i] = true
-				break
-			}
-			canReachEnd[i] = false
+	for position, length := range nums {
+		if position == len(nums)-1 {
+			return true
+		}
+		longestJump = max(longestJump, position+length)
+		if position >= longestJump {
+			return false
 		}
 	}
 
-	return canReachEnd[0]
+	return false
 }
 
-func min(num1, num2 int) int {
-	if num1 < num2 {
-		return num1
+func max(first, second int) int {
+	if first >= second {
+		return first
 	} else {
-		return num2
+		return second
 	}
 }
